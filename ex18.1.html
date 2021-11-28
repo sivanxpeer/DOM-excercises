@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+    <a href="#">link</a>
+    <img src="" alt="" />
+    <div class="x">Div with a class</div>
+    <div id="y">Div with an id</div>
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+  </body>
+  <script>
+    console.log("without querySelectors");
+    let bodyElement = document.getElementsByTagName("body")[0];
+    let h1Elemnt = document.getElementsByTagName("h1")[0];
+    let pElement = document.getElementsByTagName("p")[0];
+    let imgElement = document.getElementsByTagName("img")[0];
+    let divElements = document.getElementsByTagName("div");
+    let x = divElements[0];
+    let y = divElements[1];
+    let inputs = document.getElementsByTagName("input");
+    let input1 = inputs[0];
+    let input2 = inputs[1];
+    let input3 = inputs[2];
+
+    console.dir(bodyElement);
+    console.dir(h1Elemnt);
+    console.dir(pElement);
+    console.dir(imgElement);
+    console.dir(x);
+    console.dir(y);
+    console.dir(input1);
+    console.dir(input2);
+    console.dir(input3);
+
+    console.log(`\n`);
+    console.log("with querySelectors");
+
+    let bodyElement_ = document.querySelector("body");
+    let h1Elemnt_ = document.querySelector("h1");
+    let pElement_ = document.querySelector("p");
+    let imgElement_ = document.querySelector("img");
+    let divElements_ = document.querySelectorAll("div");
+    let x_ = divElements[0];
+    let y_ = divElements[1];
+    let inputs_ = document.querySelectorAll("input");
+    let input1_ = inputs[0];
+    let input2_ = inputs[1];
+    let input3_ = inputs[2];
+
+    console.dir(bodyElement_);
+    console.dir(h1Elemnt_);
+    console.dir(pElement_);
+    console.dir(imgElement_);
+    console.dir(x_);
+    console.dir(y_);
+    console.dir(input1_);
+    console.dir(input2_);
+    console.dir(input3_);
+
+    
+    console.log(`\n`);
+    console.log("Iterating through all with foreach");
+    console.log("with getElementBy");
+    [...bodyElement.children].forEach((e)=>console.dir(e));
+    console.log(`\n`);
+    console.log("with querySelector");
+    [...bodyElement_.children].forEach((e)=>console.dir(e));
+</script>
+</html>
