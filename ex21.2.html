@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        border:5px solid seagreen;
+      }
+      .container {
+        margin: auto;
+        height: 300px;
+        width: 400px;
+        border: 1px solid red;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .some-text {
+        display: flex;
+        width: 80%;
+        height: 30%;
+        margin: auto;
+        font-size: 16px;
+      }
+
+      .buttons {
+        display: flex;
+        width: 200px;
+        justify-content: space-between;
+        /* align-content: space-around; */
+        margin: auto;
+      }
+      .button {
+        width: 30px;
+        padding: 2%;
+        color: white;
+        background-color: tomato;
+        border: none;
+        border-radius: 8px;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="some-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque laborum
+        aut dolorem fuga sapiente ullam porro consequuntur dolor provident
+        debitis?
+      </p>
+      <div class="buttons">
+        <button class="button button1">-</button>
+        <button class="button button2">+</button>
+      </div>
+    </div>
+
+    <script>
+        const buttonMinus= document.querySelector(".button1");
+        const buttonPlus= document.querySelector(".button2");
+
+        function decreaseFontSize(minSize){
+            const text = document.querySelector(".some-text");
+            const style = getComputedStyle(text).getPropertyValue('font-size');
+            currentSize = parseInt(style);
+            if(currentSize>6)
+                text.style.fontSize = (currentSize - 1) + 'px';
+       }
+       
+        function increaseFontSize(maxSize){
+            const text = document.querySelector(".some-text");
+            const style = getComputedStyle(text).getPropertyValue('font-size');
+            currentSize = parseInt(style);
+            if(currentSize<100)
+                text.style.fontSize = (currentSize + 1) + 'px';
+       }
+       
+       buttonMinus.addEventListener("click",decreaseFontSize);
+       buttonPlus.addEventListener("click",increaseFontSize);
+
+    </script>
+  </body>
+</html>
