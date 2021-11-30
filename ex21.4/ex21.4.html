@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bulb {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .bulb-img {
+          width: 260px;
+          height: 260px;
+          display: flex;
+        }
+      </style>
+</head>
+<body>
+        <div class="bulb">
+          <div class="bulb-img">
+            <img
+              src="/ex21.4/images/bulbOff.PNG";
+              alt="bulb-off" />
+          </div>
+        </div>
+
+        <Script>
+            let img = document.querySelector("img");
+            function changeImage(){
+                if(img.src.match("bulbOff")){
+                    img.src="/ex21.4/images/bulbOn.PNG";
+                }
+                else img.src="/ex21.4/images/bulbOff.PNG"
+            }
+            img.addEventListener("click",changeImage);
+        </Script>
+</body>
+</html>
