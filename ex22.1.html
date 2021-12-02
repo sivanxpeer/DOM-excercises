@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+      body {
+        height: 100vh;
+      }
+      span{
+          display: flex;
+          /* justify-content: center; */
+      }
+      .form-container {
+        display: flex;
+        justify-content: center;
+        height: 50%;
+      }
+      .form {
+          height:100%;
+        display: flex;  
+        flex-direction: column;
+        justify-content: center;
+        align-content: space-between;
+    }
+
+    button{
+        margin-top: 10px;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <form class="form">
+        <span>Name: &nbsp</span> <input class="name" type="text" name="" id="name" />
+        <span>Age: &nbsp</span> <input type="number" name="" id="age" />
+        <span>Email: &nbsp</span> <input type="email" name="" id="email" />
+        <input type="submit">
+      </form>
+    </div>
+
+    <script>
+        // const usersAge = document.querySelector("#age");
+        // const usersEmail = document.querySelector("#email");
+        const buttonSubmit = document.querySelector("button");
+        // console.log(usersName.innerText);
+
+        buttonSubmit.addEventListener("click",function(){
+            const usersName = document.querySelector("input").value;
+            console.log(usersName);
+
+        })
+
+
+
+
+    </script>
+  </body>
+</html>
