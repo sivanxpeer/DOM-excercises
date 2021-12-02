@@ -8,27 +8,24 @@ let gameOver = false;
 
 // let element =document.createElement()
 const letterEl= document.querySelector(".letter");
-const message = document.querySelector(".display");
+const messageEl = document.querySelector(".display");
 const keyGuessedEl = document.querySelector(".keys-guessed"); 
 const guessesEl = document.querySelector(".guesses");
 
 // console.log(guessesEl.includes("a"));
 
-function getInput(e){
-    console.log(e.key);
-    return e.key;
+
+function display(message,color){
+    messageEl.innerText= message;
+    messageEl.style.color =color;
 }
 
-function guessMyLetter(){
-   const usersGuess=document.addEventListener('keypress',getInput);
-   console.log(usersGuess);
-}
 
 window.addEventListener("keydown",function(e){
     if(e.key===randomLetter){
         letterEl.innerHTML = e.key;
-        message.innerText="You guessed it!"
-        message.style.color = "green";
+        display("You guessed it!!","green");
+
     }
 
 
