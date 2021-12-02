@@ -1,0 +1,27 @@
+
+
+.game-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.welcome{
+    font-size: 30px;
+}
+
+.letter{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.keys-guessed{
+    font-size: 26px;
+}
