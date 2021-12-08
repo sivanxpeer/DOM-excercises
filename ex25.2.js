@@ -1,3 +1,4 @@
+
 obj = {
     name: "Timmy",
     printName: function(){
@@ -8,6 +9,7 @@ obj = {
         setTimeout(()=> console.log(this.name), 1000);
     }
 }
+
 
 obj.printName();
 obj.printName2();
